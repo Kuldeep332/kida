@@ -22,7 +22,7 @@ router.post('/create/orderId',function(req,res,next){
 })
 router.post('/api/payment/verify', (req, res) => {
   try {
-      var { validatePaymentVerification, validateWebhookSignature } = require('../node_modules/razorpay/dist/utils/razorpay-utils');
+    var { validatePaymentVerification, validateWebhookSignature } =require('../node_modules/razorpay/dist/utils/razorpay-utils');
 
       const razorpayOrderId = req.body.response.razorpay_order_id;
       const razorpayPaymentId = req.body.response.razorpay_payment_id;
